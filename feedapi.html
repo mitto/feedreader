@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<link rel="stylesheet" href="style.css" />
+		<title>RSS簡易リーダー（仮）</title>
+		<script src="https://www.google.com/jsapi?key=ABQIAAAAg0Y21HaqMhnBGU1qWp98VRT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQXr43I9ivyXDR_ZuvFAMAkxG9HKg" type="text/javascript"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1>RSS簡易リーダー（仮）</h1>
+			<div id="title">
+			</div>
+			<div id="urlform">
+				<form id="inputform" action="">
+					<input type="text" id="urltext" size="50" />
+					<input type="button" id="getbutton" value="取得" />
+					<input type="button" id="clearbutton" value="クリア" /><br />
+					<label>詳細を表示：</label><input type="checkbox" id="enabledetail" />
+					<label>自動更新：</label><input type="checkbox" id="enabletimer" checked="checked" />
+					<label>更新間隔：</label>
+					<select id="updateinterval">
+						<option value="1">1分</option>
+						<option value="2">2分</option>
+						<option value="3">3分</option>
+						<option value="5">5分</option>
+						<option value="10">10分</option>
+						<option value="30">30分</option>
+						<option value="60" selected="selected">60分</option>
+					</select>
+				</form>
+				<p><span id="lastupdate"></span><span id="time"></span></p>
+			</div>
+			<div id="feed">
+				Loading...
+			</div>
+			<div id="footer">
+				<p>作った人：<a href="http://twitter.com/#!/mittostar" target="_blank">@mitto</a></p>
+			</div>
+		</div>
+	</body>
+</html>
